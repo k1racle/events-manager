@@ -94,3 +94,4 @@ events-manager/
 
 GPL v2 или позднее.
 
+
