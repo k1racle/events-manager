@@ -79,11 +79,12 @@
 - Все AJAX-запросы защищены nonce.
 
 ## Структура плагина
+
 events-manager/
-├── events-manager.php # Главный файл плагина
-└── assets/
-├── events-manager.css # Стили
-└── events-manager.js # JavaScript (AJAX, модальное окно, фильтры)
+events-manager.php # Главный файл плагина
+assets/
+events-manager.css # Стили
+events-manager.js # JavaScript (AJAX, модальное окно, фильтры)
 
 
 ## Автор
@@ -93,5 +94,6 @@ events-manager/
 ## Лицензия
 
 GPL v2 или позднее.
+
 
 
