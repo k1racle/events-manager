@@ -1,0 +1,209 @@
+/* Events Manager Styles - финальная версия */
+
+.em-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: center;
+    background: #f8faff;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0,50,100,0.05);
+}
+
+.em-filters select,
+.em-filters button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 40px;
+    border: 1px solid #d9e1ec;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.em-filters select {
+    flex: 1 1 200px;
+    min-width: 180px;
+    color: #1a2b3c;
+}
+
+.em-filters select:hover {
+    border-color: #0066cc;
+}
+
+.em-filters button {
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.em-filters button:hover {
+    transform: translateY(-2px);
+}
+
+.em-events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+}
+
+@media (max-width: 900px) {
+    .em-events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .em-events-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.em-event-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f0f2f5;
+    cursor: pointer;
+}
+
+.em-event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.12);
+}
+
+.em-event-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.em-event-content {
+    padding: 22px 20px 20px;
+    flex: 1;
+}
+
+.em-event-content h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.5rem;
+    color: #1a2b3c;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.em-event-content p {
+    margin: 8px 0;
+    color: #2c3e50;
+    font-size: 0.98rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.em-event-content p strong {
+    min-width: 70px;
+    color: #5d6d7e;
+    font-weight: 500;
+}
+
+.em-event-type::before {
+    content: '🏷️';
+    margin-right: 6px;
+    font-size: 1rem;
+}
+
+.em-event-date::before {
+    content: '📅';
+    margin-right: 6px;
+    font-size: 1rem;
+}
+
+.em-event-city::before {
+    content: '🏙️';
+    margin-right: 6px;
+    font-size: 1rem;
+}
+
+.em-event-place::before {
+    content: '📍';
+    margin-right: 6px;
+    font-size: 1rem;
+}
+
+.em-load-more {
+    display: block;
+    width: fit-content;
+    margin: 35px auto 20px;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 36px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+    text-align: center;
+}
+
+.em-load-more:hover {
+    transform: translateY(-2px);
+}
+
+.em-load-more:active {
+    transform: scale(0.97);
+}
+
+.em-load-more:disabled {
+    background: #b0c4de;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+}
+
+.em-no-events {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #5d6d7e;
+    background: #f9f9fc;
+    padding: 50px;
+    border-radius: 40px;
+    border: 2px dashed #d0d9e8;
+    grid-column: 1 / -1;
+}
+
+.em-loading {
+    text-align: center;
+    padding: 40px;
+    color: #5d6d7e;
+    font-size: 1.2rem;
+    grid-column: 1 / -1;
+}
+
+.em-event-map {
+    margin-top: 18px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.em-event-map iframe {
+    vertical-align: middle;
+    width: 100%;
+    height: 200px;
+    border: 0;
+}
